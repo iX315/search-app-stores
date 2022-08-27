@@ -31,7 +31,7 @@ const Home: NextPage = () => {
   }
 
   return (
-    <div>
+    <Box p="4">
       <Head>
         <title>Search App Stores</title>
         <meta name="description" content="quick search engine for apps IDs" />
@@ -65,7 +65,7 @@ const Home: NextPage = () => {
         </a>{" "}
         with ❤️
       </Box>
-    </div>
+    </Box>
   )
 }
 

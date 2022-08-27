@@ -11,9 +11,12 @@ export const Results = ({ data }: ResultsProps) => {
 
   return (
     <Grid
-      gridTemplateColumns="repeat(6, 1fr)"
-      gridTemplateRows="repeat(6, 1fr)"
+      gridTemplateColumns={[
+        "repeat(2, 1fr)",
+        "repeat(4, 1fr)"
+      ]}
       gap="2em"
+      mt="6"
     >
       {data.map((item: any, i) => (
         <ResultCard key={i} {...item} />
