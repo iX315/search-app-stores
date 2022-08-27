@@ -18,7 +18,7 @@ const Home: NextPage = () => {
   const handleSearch = async () => {
     const q = inputSearchRef.current?.value
 
-    const res = await fetch("/api/search?q=" + q)
+    const res = await fetch("/api/search?q=" + encodeURIComponent(q))
     const { result, error } = await res.json()
 
     if (error) {
