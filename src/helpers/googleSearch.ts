@@ -15,11 +15,19 @@ export const apiRequest = async ({
 }: ApiRequestProps) => {
   if (!query) return null
 
-  const parameters = ["key=" + googleApiKey, "cx=" + cx, "q=" + "next.js"]
+  const parameters = [
+    "key=" + googleApiKey,
+    "cx=" + cx,
+    "q=" + encodeURIComponent(query),
+  ]
 
-  const res = await fetch(`${googleApiUrl}?${parameters.join("&")}`)
+  try {
+    const res = await fetch(`${googleApiUrl}?${parameters.join("&")}`)
 
-  return await res.json()
+    return await res.json()
+  } catch (error) {
+    throw new Error("api request failed")
+  }
 }
 
 export type GoogleApiParsedData = {
