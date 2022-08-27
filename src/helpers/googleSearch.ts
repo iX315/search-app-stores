@@ -1,4 +1,4 @@
-const googleApiUrl = "https://googleapis.com/customsearch/v1"
+const googleApiUrl = "https://www.googleapis.com/customsearch/v1"
 const googleApiKey = process.env.GOOGLE_API_KEY || ""
 export const playStoreApiKey = process.env.PLAY_STORE_CX || ""
 export const galaxyStoreApiKey = process.env.GALAXY_STORE_CX || ""
